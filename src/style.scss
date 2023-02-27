@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Mars;
+    font-weight: 100;
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+
+@font-face {
+    font-family: "Anurati";
+    src: url(/Assets/fonts/Anurati-Regular.otf);
+}
+
+@font-face {
+    font-family:Mars;
+    src: url(/Assets/fonts/Mars-Project.ttf);
+}
+
+@font-face {
+    font-family: Adam;
+    src: url(/Assets/fonts/Adam-Medium.ttf);
+}
+
+@import "main";
+@import "header";
+@import "moonWordSpace";
+@import "popUp";
+@import "simulator";

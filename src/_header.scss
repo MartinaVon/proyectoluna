@@ -1,0 +1,21 @@
+header {
+    display: flex;
+    height: 90px;
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    background-color: transparent;
+
+    nav {
+        width: 50%;
+        ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+            font-size: 19px;
+        }
+    }
+    .logo-container {
+        width: 50%;
+    }
+}

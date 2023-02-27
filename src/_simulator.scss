@@ -1,0 +1,178 @@
+.simulator-overlay {
+    height: 100vh;
+    width: 100%;
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.475);
+    z-index: 2;
+    .simulator {
+        width: 70%;
+        padding: 30px;
+        position: absolute;
+        height: 90%;
+        background: rgb(36,36,79);
+        background: radial-gradient(circle, rgba(36,36,79,1) 18%, rgba(32,18,48,1) 59%, rgba(23,22,29,1) 100%);
+        border: solid 1px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        span {
+            align-self: flex-end;
+            margin-right: 15px;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+        .container-for-greeting {
+            width: 100%;
+            h4 {
+                margin: 5px;
+                font-size: 30px;
+                display: inline;
+                width: 50%;
+            }
+        }
+
+        .simulator-choose-ticket {
+            display: flex;
+            margin: 15px 0; 
+            width: 90%;
+            height: 90%;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            p {
+                width: 100%;
+                text-align: center;
+                font-size: 20px;
+            }
+            .simulator_ticket {
+                height: 70%;
+                width: 30%;
+                border: 1px solid #ffffff89;
+                border-radius: 8%;
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                padding: 30px;
+                h6 {
+                    font-size: 15px;
+                    margin-bottom: 20px;
+                }
+                span {
+                    font-size: 15px;
+                }
+                .price { 
+                    font-size: 25px;
+                    align-self: center;
+                    color: #fd9550;
+                }
+                ul {
+                    list-style: none;
+                    margin-top: 20px;
+                }
+                .watch-more {
+                    font-size: 15px;
+                    margin-top: 15px;
+                    align-self:flex-end;
+                }
+            }
+            .ticket1 {
+                background: rgb(221,88,0);
+                background: linear-gradient(338deg, rgba(221,88,0,1) 0%, rgba(128,57,44,1) 0%, rgba(165,69,26,1) 0%, rgba(83,42,65,1) 22%, rgba(53,31,79,1) 55%, rgba(23,22,29,0.9724264705882353) 96%);
+            }
+            .ticket2 { 
+                background: rgb(221,88,0);
+                background: linear-gradient(338deg, rgba(221,88,0,1) 0%, rgba(128,57,44,1) 0%, rgba(165,69,26,1) 0%, rgba(83,42,65,1) 22%, rgba(53,31,79,1) 55%, rgba(23,22,29,0.9724264705882353) 96%);
+            }
+            .ticket3 {
+                background: rgb(221,88,0);
+                background: linear-gradient(338deg, rgba(221,88,0,1) 0%, rgba(128,57,44,1) 0%, rgba(165,69,26,1) 0%, rgba(83,42,65,1) 22%, rgba(53,31,79,1) 55%, rgba(23,22,29,0.9724264705882353) 96%);
+            }
+        }
+
+        .simulator-form-container {
+            display: flex; 
+            width: 90%;
+            height: 90%;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            display: none;
+
+            p {
+                width: 100%;
+                font-size: 3vh;
+                text-align: center;
+            }
+            .get-ticket-info {
+                color: #fd9550;
+            }
+            .simulator-form-arrow-back {
+                font-size: 5vh;
+                align-self: flex-start;
+            }
+            form {
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+
+                .form-input-container {
+                    display: flex;
+                    justify-content: space-around;
+                    margin: 40px 0; 
+                }
+                .item-input-container {
+                    margin: 20px 0;
+                    display: flex;
+                    justify-content: center;
+                    .item {
+                        width: 60%;
+                        padding: 10px;
+                    }
+                    .item2, .item3, .item4, .item5 {
+                        display: none;
+                    }
+                    
+                    .ArrowItem {
+                        font-size: 30px;
+                        margin-left: 20px;
+                    } 
+
+                    .ArrowItem2, .ArrowItem3, .ArrowItem4, .ArrowItem5 {
+                        display: none;
+                    }
+                } 
+            }
+            .formSubmit {
+                width: 50%;
+                padding: 10px;
+                border: none;
+                background-color: #fd9550;
+                font-size: 20px;
+                align-self: center;
+                cursor: pointer;
+                display: none;
+            }
+        }
+
+        .simulator-result-container {
+            width: 90%;
+            height: 90%;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            display: none;
+            .simulator-results-arrow-back {
+               font-size: 5vh;
+            }
+            h5 {
+                font-size: 70px;
+            }
+         }
+    }
+}
