@@ -1,5 +1,5 @@
 
-let  closePopUp = document.querySelector(".span-for-closing-popUp")
+let closePopUp = document.querySelector(".span-for-closing-popUp")
 let submitPopUp = document.querySelector(".submit-input")
 let overlay = document.querySelector(".popUp-overlay")
 
@@ -34,6 +34,6 @@ function fSubmitPopUp() {
 closePopUp.addEventListener("click", fClosingPopUp)
 submitPopUp.addEventListener("click", fGetUserName)
 
-functio
+
 
 
