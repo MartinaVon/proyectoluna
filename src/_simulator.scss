@@ -129,6 +129,7 @@
                 .item-input-container {
                     margin: 20px 0;
                     display: flex;
+                    flex-wrap: wrap;
                     justify-content: center;
                     .item {
                         width: 60%;
@@ -145,6 +146,12 @@
 
                     .ArrowItem2, .ArrowItem3, .ArrowItem4, .ArrowItem5 {
                         display: none;
+                    }
+                    .item-write-something {
+                        width: 90%;
+                        margin: auto;
+                        color: #fd9550;
+                        margin-top: 10px;
                     }
                 } 
             }
@@ -171,7 +178,17 @@
                font-size: 5vh;
             }
             h5 {
-                font-size: 70px;
+                font-size: 30px;
+                color: #fd9550;
+            }
+            h6 {
+                font-size: 25px;
+                width: 60%;
+                text-align: start;
+            }
+
+            .simulator-results-arrow-back {
+                align-self: flex-start;
             }
          }
     }

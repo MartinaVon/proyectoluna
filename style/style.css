@@ -32,6 +32,31 @@
   flex-direction: column;
   color: white;
 }
+.container-for-background .stars-background {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  opacity: 50%;
+}
+.container-for-background .main-banner .astronauta {
+  position: absolute;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 200px;
+  height: 480px;
+  bottom: -50px;
+  right: 10px;
+  z-index: 4;
+}
+.container-for-background .main-banner .planeta {
+  position: absolute;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 400px;
+  height: 400px;
+  top: -50px;
+  rotate: -30deg;
+}
 .container-for-background .main-banner .moon-title {
   width: 100%;
   text-align: center;
@@ -83,6 +108,7 @@
 .container-for-background .moon-exploration .moon-exploration___img {
   height: 100vh;
   width: 100%;
+  position: relative;
 }
 .container-for-background .moon-exploration .moon-exploration___img img {
   width: 600px;
@@ -94,6 +120,7 @@
   padding: 15px;
   display: flex;
   flex-direction: column;
+  position: relative;
   align-items: center;
 }
 .container-for-background .org-info .org-info__textContainer {
@@ -156,6 +183,7 @@
   width: 100%;
   padding: 15px;
   display: flex;
+  position: relative;
   flex-direction: column;
 }
 .container-for-background .image-gallery h6 {
@@ -174,7 +202,8 @@
   width: 500px;
   height: 500px;
   margin: 10px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .container-for-background .go-to-simulator {
   width: 100%;
@@ -420,6 +449,7 @@ header .logo-container {
 .simulator-overlay .simulator .simulator-form-container form .item-input-container {
   margin: 20px 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .simulator-overlay .simulator .simulator-form-container form .item-input-container .item {
@@ -435,6 +465,12 @@ header .logo-container {
 }
 .simulator-overlay .simulator .simulator-form-container form .item-input-container .ArrowItem2, .simulator-overlay .simulator .simulator-form-container form .item-input-container .ArrowItem3, .simulator-overlay .simulator .simulator-form-container form .item-input-container .ArrowItem4, .simulator-overlay .simulator .simulator-form-container form .item-input-container .ArrowItem5 {
   display: none;
+}
+.simulator-overlay .simulator .simulator-form-container form .item-input-container .item-write-something {
+  width: 90%;
+  margin: auto;
+  color: #fd9550;
+  margin-top: 10px;
 }
 .simulator-overlay .simulator .simulator-form-container .formSubmit {
   width: 50%;
@@ -458,5 +494,14 @@ header .logo-container {
   font-size: 5vh;
 }
 .simulator-overlay .simulator .simulator-result-container h5 {
-  font-size: 70px;
+  font-size: 30px;
+  color: #fd9550;
+}
+.simulator-overlay .simulator .simulator-result-container h6 {
+  font-size: 25px;
+  width: 60%;
+  text-align: start;
+}
+.simulator-overlay .simulator .simulator-result-container .simulator-results-arrow-back {
+  align-self: flex-start;
 }

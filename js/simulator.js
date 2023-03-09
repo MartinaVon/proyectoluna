@@ -73,102 +73,137 @@ arrowItem5.addEventListener("click", fSubmitItem)
 let resultContainer = document.querySelector(".simulator-result-container")
 let simulatorResultGoBack = document.querySelector(".simulator-results-arrow-back")
 
+let itemWriteSomething = document.querySelector(".item-write-something")
 
 let personalItems = []
 
 function fGoItem2() {
-    item1.style.display = "none";
-    arrowItem1.style.display = "none";
-    item2.style.display = "block";
-    arrowItem2.style.display = "block";
-
-    let item1Value = document.querySelector(".item1").value 
-    personalItems.push(item1Value)
+    let item1Value = document.querySelector(".item1").value
+    if (item1Value.length > 1) {
+        item1.style.display = "none";
+        arrowItem1.style.display = "none";
+        item2.style.display = "block";
+        arrowItem2.style.display = "block";
+        itemWriteSomething.style.display = "none";
+    
+        personalItems.push(item1Value)
+    } else {
+        itemWriteSomething.style.display = "block"
+        itemWriteSomething.textContent = "Please, write."  
+    }
 }
+
 function fGoItem3() {
-    item2.style.display = "none";
-    arrowItem2.style.display = "none";
-    item1.style.display = "none";
-    arrowItem1.style.display = "none";
-    item3.style.display = "block";
-    arrowItem3.style.display = "block";
-
     let item2Value = document.querySelector(".item2").value 
-    personalItems.push(item2Value)
-}
-function fGoItem4() {
-    item1.style.display = "none";
-    arrowItem1.style.display = "none";
-    item3.style.display = "none";
-    arrowItem3.style.display = "none";
-    item4.style.display = "block";
-    arrowItem4.style.display = "block";
+    if (item2Value.length > 1) {
+        item2.style.display = "none";
+        arrowItem2.style.display = "none";
+        item1.style.display = "none";
+        arrowItem1.style.display = "none";
+        item3.style.display = "block";
+        arrowItem3.style.display = "block";
+        itemWriteSomething.style.display = "none";
 
+        personalItems.push(item2Value)
+    } else {
+        itemWriteSomething.style.display = "block"
+        itemWriteSomething.textContent = "Please, write." 
+    }
+}
+
+function fGoItem4() {
     let item3Value = document.querySelector(".item3").value 
-    personalItems.push(item3Value)
+    if (item3Value.length > 1) {
+        item1.style.display = "none";
+        arrowItem1.style.display = "none";
+        item3.style.display = "none";
+        arrowItem3.style.display = "none";
+        item4.style.display = "block";
+        arrowItem4.style.display = "block";
+        itemWriteSomething.style.display = "none";
+    
+        personalItems.push(item3Value)
+    } else {
+        itemWriteSomething.style.display = "block"
+        itemWriteSomething.textContent = "Please, write."
+    }
+    
 }
 function fGoItem5() {
-    item1.style.display = "none";
-    arrowItem1.style.display = "none";
-    item4.style.display = "none";
-    arrowItem4.style.display = "none";
-    item5.style.display = "block";
-    arrowItem5.style.display = "block";
-
-    let item4Value = document.querySelector(".item4").value 
-    personalItems.push(item4Value)
+    let item4Value = document.querySelector(".item4").value
+    if (item4Value.length > 1) {
+        item1.style.display = "none";
+        arrowItem1.style.display = "none";
+        item4.style.display = "none";
+        arrowItem4.style.display = "none";
+        item5.style.display = "block";
+        arrowItem5.style.display = "block";
+        itemWriteSomething.style.display = "none";
+         
+        personalItems.push(item4Value)
+    } else {
+        itemWriteSomething.style.display = "block"
+        itemWriteSomething.textContent = "Please, write."
+    }
 }
 
 function fSubmitItem() {
-    item1.style.display = "none";
-    arrowItem1.style.display = "none";
-    item4.style.display = "none";
-    arrowItem4.style.display = "none";
-    formSubmit.style.display = "block"
-
-    let item5Value = document.querySelector(".item5").value 
-    personalItems.push(item5Value)
-}
+    let item5Value = document.querySelector(".item5").value
+    if (item5Value.length > 1) {
+        item1.style.display = "none";
+        arrowItem1.style.display = "none";
+        item4.style.display = "none";
+        arrowItem4.style.display = "none";
+        formSubmit.style.display = "block"
+        itemWriteSomething.style.display = "none";
+        
+        personalItems.push(item5Value)
+    } else {
+        itemWriteSomething.style.display = "block"
+        itemWriteSomething.textContent = "Please, write."
+    }
+       
+    }
  
 
 class Simulator {
-    constructor(destination, company, personalItems) {
+    constructor(destination, companie, personalItems) {
         this.destination = destination;
-        this.company = company;
+        this.companie = companie;
         this.personalItems = personalItems;
     }
 }
 
 
 formSubmit.addEventListener("click", simulator1)
-let showResults = document.querySelector(".show-results")
+
 
 function simulator1() {
     let destination = document.querySelector('input[name="departure"]:checked').value
-    let company = document.querySelector('input[name="companie"]:checked').value
+    let companie = document.querySelector('input[name="companie"]:checked').value
+    let departureResult = document.querySelector(".departure-result")
+    let companieResult = document.querySelector(".companie-result")
+    let itemsResult = document.querySelector(".items-result")
 
-    const simulador = new Simulator (destination, company, personalItems)
+
+    const simulador = new Simulator (destination, companie, personalItems)
 
     containerForm.style.display = "none";
     resultContainer.style.display = "flex";
-    console.log(simulador)
+    departureResult.textContent += destination
+    companieResult.textContent += companie  
 
-    for (const key in simulador) {
-        showResults.textContent += (simulador[key]) + <br/> 
-        console.log(simulador[key])
+    
+    for (i = 0; i < personalItems.length; i++) {
+        let itemsPrint = personalItems[i] + ", ";
+        itemsResult.textContent += itemsPrint
     }
+    
+
+    console.log(personalItems)
+    console.log(simulador)
 }
 
-
-// for (let clave in perro){
-//     console.log(perro[clave]);
-//   }
-//   /*
-//   "Scott"
-//   "Negro"
-//   true
-//   5
-//   */
 
 simulatorResultGoBack.addEventListener("click", fSimulatorResultGoBack)
 

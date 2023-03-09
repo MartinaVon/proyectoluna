@@ -25,6 +25,7 @@
     </header>
     
     <main class="container-for-background">
+        
         <!-- <section class="popUp-overlay">
             <div class="init-popUp">
                 <span class="material-symbols-outlined span-for-closing-popUp">close</span>
@@ -34,7 +35,11 @@
                 <h6 id="enterName"></h6>
             </div>
         </section> -->
+
+        <img src="/Assets/img/ESTRELLAS.png" alt="" class="stars-background">
         <section class="main-banner">
+            <img src="/Assets/img/astronauta.svg" alt="" class="astronauta">
+            <!-- <img src="/Assets/img/planeta.svg" alt="" class="planeta"> -->
             <h4 class="text-for-welcome"></h4>
             <div class="moon-title">
                 <h1>MO ON</h1>
@@ -219,6 +224,7 @@
                           
                           <input type="text" placeholder="Enter your fifth item" class="item5 item">
                           <span class="material-symbols-outlined ArrowItem5 ArrowItem">arrow_forward</span>
+                          <p class="item-write-something"></p>
                         </div>
                     </form>
                     <button class="formSubmit">SEND</button>
@@ -226,6 +232,9 @@
                 </div>
                 <div class="simulator-result-container">
                     <h5 class="show-results">Your results are:</h5>
+                    <h6 class="departure-result">Departure: </h6>
+                    <h6 class="companie-result">Companie: </h6>
+                    <h6 class="items-result">The items you will take: </h6>
 
                     <span class="material-symbols-outlined simulator-results-arrow-back">arrow_back</span>
                 </div>
@@ -235,5 +244,6 @@
 
 <script src="/js/simulator.js"></script>    
 <script src="/js/popup.js"></script>
+<script src="/js/parallax.js"></script>
 </body>
 </html>
