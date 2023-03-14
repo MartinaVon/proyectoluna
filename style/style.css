@@ -41,7 +41,8 @@
 }
 .container-for-background .main-banner .astronauta {
   position: absolute;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 200px;
   height: 480px;
   bottom: -30px;
@@ -50,7 +51,8 @@
 }
 .container-for-background .main-banner .planeta {
   position: absolute;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 400px;
   height: 400px;
   top: -50px;
@@ -90,28 +92,6 @@
   position: absolute;
   top: 100px;
   left: 50px;
-}
-.container-for-background .moon-exploration {
-  width: 100%;
-  height: 100;
-}
-.container-for-background .moon-exploration .moon-exploration___title {
-  font-size: 30px;
-  margin-top: 150px;
-  padding: 15px;
-}
-.container-for-background .moon-exploration .moon-exploration___title h5 {
-  margin-left: 100px;
-  font-size: 60px;
-}
-.container-for-background .moon-exploration .moon-exploration___img {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-}
-.container-for-background .moon-exploration .moon-exploration___img img {
-  width: 600px;
-  height: 600px;
 }
 .container-for-background .org-info {
   height: 100vh;
@@ -201,7 +181,8 @@
   width: 500px;
   height: 500px;
   margin: 10px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .container-for-background .go-to-simulator {
   width: 100%;
@@ -245,6 +226,7 @@ header .logo-container {
   width: 130%;
   height: auto;
   align-self: center;
+  margin-top: 200px;
 }
 .the-moon-word-space h4 {
   display: inline;
@@ -504,4 +486,131 @@ header .logo-container {
 }
 .simulator-overlay .simulator .simulator-result-container .simulator-results-arrow-back {
   align-self: flex-start;
+}
+
+.moon-exploration {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+.moon-exploration .moon-exploration___title {
+  font-size: 30px;
+  margin-top: 150px;
+  padding: 15px;
+}
+.moon-exploration .moon-exploration___title h5 {
+  margin-left: 100px;
+  font-size: 60px;
+}
+.moon-exploration .moon-exploration___img {
+  height: auto;
+  width: 50%;
+  position: relative;
+}
+.moon-exploration .moon-exploration___img img {
+  width: 600px;
+  height: 600px;
+}
+.moon-exploration .moon-exploration___img span {
+  position: absolute;
+  color: #fd9550;
+  cursor: pointer;
+  display: none;
+}
+.moon-exploration .moon-exploration___img .rain-span1 {
+  top: 70%;
+  left: 20%;
+}
+.moon-exploration .moon-exploration___img .rain-span2 {
+  top: 50%;
+  left: 70%;
+}
+.moon-exploration .moon-exploration___img .rain-span3 {
+  top: 20%;
+  left: 60%;
+}
+.moon-exploration .moon-exploration___img .cold-span1 {
+  top: 56%;
+  left: 35%;
+}
+.moon-exploration .moon-exploration___img .cold-span2 {
+  top: 20%;
+  left: 50%;
+}
+.moon-exploration .moon-exploration___img .cold-span3 {
+  top: 80%;
+  left: 55%;
+}
+.moon-exploration .moon-exploration___img .hot-span1 {
+  top: 25%;
+  left: 65%;
+}
+.moon-exploration .moon-exploration___img .hot-span2 {
+  top: 80%;
+  left: 42%;
+}
+.moon-exploration .moon-exploration___img .hot-span3 {
+  top: 30%;
+  left: 20%;
+}
+.moon-exploration .moon-exploration__filter {
+  width: 50%;
+  align-self: flex-end;
+  position: relative;
+}
+.moon-exploration .moon-exploration__filter h6 {
+  font-size: 30px;
+  padding: 5px;
+  text-align: center;
+  border: #fd9550 3px solid;
+  border-right: none;
+  border-radius: 10px;
+}
+.moon-exploration .moon-exploration__filter .weather-options {
+  display: flex;
+  margin-top: 25px;
+  justify-content: space-around;
+}
+.moon-exploration .moon-exploration__filter .weather-options h4 {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #e9630a;
+  padding: 5px;
+  width: 20%;
+  text-align: center;
+  border-radius: 10px;
+}
+.moon-exploration .fadeIn {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.moon-exploration .fadeIn.show {
+  opacity: 1;
+}
+.moon-exploration .cold-weather-card1 {
+  width: 40%;
+  position: absolute;
+  height: 60%;
+  background: rgb(36, 36, 79);
+  background: radial-gradient(circle, rgb(36, 36, 79) 18%, rgb(32, 18, 48) 59%, rgb(23, 22, 29) 100%);
+  top: 400px;
+  right: 70px;
+  border-radius: 20px;
+}
+.moon-exploration .cold-weather-card1 h3 {
+  font-size: 50px;
+  text-align: center;
+}
+.moon-exploration .cold-weather-card1 p {
+  font-size: 20px;
+  margin: 20px 0;
+  text-align: center;
+  top: 50px;
+}
+.moon-exploration .cold-weather-card1 .image {
+  width: 380px;
+  display: block;
+  margin: auto;
 }

@@ -1,0 +1,138 @@
+.moon-exploration {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+
+    .moon-exploration___title {
+        font-size: 30px;
+        margin-top: 150px;
+        padding: 15px;
+        h5 {
+            margin-left: 100px;
+            font-size: 60px;
+        }
+    }
+    .moon-exploration___img {
+    height: auto;
+    width: 50%;
+    position: relative;
+    img {
+        width: 600px;
+        height: 600px;
+    }
+    span {
+        position: absolute;
+        color: #fd9550;
+        cursor: pointer;
+        display: none;
+        
+    }
+    .rain-span1 {
+        top: 70%;
+        left: 20%;
+        
+    }
+    .rain-span2 {
+        top: 50%;
+        left: 70%;
+    }
+    .rain-span3 {
+        top: 20%;
+        left: 60%;
+
+    }
+    .cold-span1 {
+        top: 56%;
+        left: 35%;
+        
+    }
+    .cold-span2 {
+        top: 20%;
+        left: 50%;
+    }
+    .cold-span3 {
+        top: 80%;
+        left: 55%;
+    }
+    .hot-span1 {
+        top: 25%;
+        left: 65%;
+        
+    }
+    .hot-span2 {
+        top: 80%;
+        left: 42%;
+    }
+    .hot-span3 {
+        top: 30%;
+        left: 20%;
+    }
+    }
+.moon-exploration__filter{
+    width: 50%;
+    align-self: flex-end;
+    position: relative;
+    
+    h6 {
+        font-size: 30px;
+        padding: 5px;
+        text-align: center;
+        border:#fd9550 3px solid;
+        border-right: none;
+        border-radius: 10px;
+    }
+    .weather-options {
+        display: flex;
+        margin-top: 25px;
+        justify-content: space-around;
+        h4 {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #e9630a;
+            padding: 5px;
+            width: 20%;
+            text-align: center;
+            border-radius: 10px;
+        }
+    }
+}    
+
+.fadeIn {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .fadeIn.show {
+    opacity: 1;
+  }
+
+.cold-weather-card1 {
+    width: 40%;
+    position: absolute;
+    height: 60%;
+    background: rgb(36,36,79);
+    background: radial-gradient(circle, rgba(36,36,79,1) 18%, rgba(32,18,48,1) 59%, rgba(23,22,29,1) 100%);
+    top: 400px;
+    right: 70px;
+    border-radius: 20px;
+
+    h3 {
+        font-size: 50px;
+        text-align: center;
+    }
+    p {
+        font-size: 20px;
+        margin: 20px 0;
+        text-align: center;
+        top: 50px
+    }
+    .image {
+    width: 380px;
+    display: block;
+    margin: auto;
+    }
+}
+
+}
