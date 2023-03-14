@@ -598,6 +598,7 @@ header .logo-container {
   top: 400px;
   right: 70px;
   border-radius: 20px;
+  display: none;
 }
 .moon-exploration .cold-weather-card1 h3 {
   font-size: 50px;

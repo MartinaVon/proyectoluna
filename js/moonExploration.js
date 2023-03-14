@@ -59,10 +59,14 @@ hot.addEventListener("click", ()=>{
   let parag = document.querySelector(".parag")
 
   coldSpan2.addEventListener("click", ()=> {
+    coldWeatherCard1.classList.add("show");
+    coldWeatherCard1.style.display = "block"
     console.log(flag)
     flag = false
     if (flag == false) {
+      let forImage = document.querySelector(".forImage") 
       flag = true;
+      forImage.innerHTML = ""
       h3s.innerHTML = ""
       parag.innerHTML = ""
       for (const propiedad in coldObj2) {
@@ -73,7 +77,7 @@ hot.addEventListener("click", ()=>{
         } 
         else if (propiedad === "image") {
           const image = coldObj2[propiedad];
-          coldWeatherCard1.appendChild(image)
+          forImage.appendChild(image)
           image.classList.add("image");
           flag = true
         }
@@ -83,6 +87,43 @@ hot.addEventListener("click", ()=>{
 })
 
 coldSpan1.addEventListener("click", ()=> {
+  coldWeatherCard1.classList.add("show");
+  coldWeatherCard1.style.display = "block"
+  console.log(flag)
+  flag = false
+  if (flag == false) {
+    let forImage = document.querySelector(".forImage") 
+    flag = true;
+    forImage.innerHTML = ""
+    h3s.innerHTML = ""
+    parag.innerHTML = ""
+    for (const propiedad in coldObj1) {
+      if (propiedad === "name") {
+        h3s.innerHTML = coldObj1[propiedad]
+      }  else if (propiedad === "description") {
+        parag.innerHTML = coldObj1[propiedad]
+      } 
+      else if (propiedad === "image") {
+        const image = coldObj1[propiedad];
+        forImage.appendChild(image)
+        image.classList.add("image");
+        flag = true
+      }
+    }
+
+  }
+})
+
+// function FmostrarResultado() {
+//   if (empleadosFlag == false) {
+//       empleadosFlag = true;
+//       div_ine.innerHTML = "";
+//       for(item of empleadosActuales){
+//           div_ine.innerHTML += `<p>${"Nombre:"}${item.Nombre} ${"Apellido:"} ${item.Apellido} ${"Sueldo:"} ${item.Sueldo}</p>`;
+//       }
+//   }
+
+/*coldSpan1.addEventListener("click", ()=> {
   coldWeatherCard1.style.display = "block"
   console.log(flag)
   flag = false
@@ -105,16 +146,7 @@ coldSpan1.addEventListener("click", ()=> {
     }
 
   }
-})
-
-// function FmostrarResultado() {
-//   if (empleadosFlag == false) {
-//       empleadosFlag = true;
-//       div_ine.innerHTML = "";
-//       for(item of empleadosActuales){
-//           div_ine.innerHTML += `<p>${"Nombre:"}${item.Nombre} ${"Apellido:"} ${item.Apellido} ${"Sueldo:"} ${item.Sueldo}</p>`;
-//       }
-//   }
+})*/
   
 
 
